@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fizzBuzz.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FIZZ-BUZZ</h1>
+        <input type="number" placeholder="enter a number to check" id="num">
+        <button  onclick="btn()"  class="btn"> Check</button>
+        <div class="display" id="show"></div>
+        
+        <script>
+
+         var song  = new Audio ("/intro/audio/beerpour-91033.mp3")
+         var songs  = new Audio ("/intro/audio/glass-bottle-open-86299.mp3")
+         var songE = new Audio ("/intro/audio/slice-apple-on-wood_fizz-85879.mp3")
+         var songF = new Audio ("/intro/audio/invalid-selection-39351.mp3")
+         var songC= new Audio ("/intro/audio/error-call-to-attention-129258.mp3")
+            function btn() {
+
+        if ( num.value % 3==0 && num.value %5==0 ){
+        show.innerHTML = 'FizzBuzz'
+        show.style.color ='blue'
+        song.play()
+
+    }
+      else if ( num.value % 3==0){
+        show.innerHTML = 'Fizz'
+        show.style.color ='blue'
+        songs.play()
+        
+    }
+    else if (num.value %5==0){
+        show.innerHTML = 'Buzz'
+        show.style.color ='green'
+        songE.play()
+    }
+ 
+
+    else{
+        show.innerHTML = 'Invalid'
+        show.style.color ='red'
+        songF.play()
+    }
+     if(num.value =="") {
+        show.innerHTML = 'Enter a valid number boss' 
+        show.style.color ='red'
+        songC.play()
+    }
+    
+}
+
+</script>
+    <h1></h1>
+</body>
+</html>
